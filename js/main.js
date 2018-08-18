@@ -1,9 +1,14 @@
 const cat = document.getElementById('catImg');
 const cat2 = document.getElementById('catImg2');
+const catName1 = "Cute Kitten";
+const catName2 = "Hiding Cat";
 const scoreText = document.getElementById('score');
 const scoreText2 = document.getElementById('score2');
 let score1 = 0;
 let score2 = 0;
+
+document.getElementById('catName1').innerHTML = catName1;
+document.getElementById('catName2').innerHTML = catName2;
 
 cat.addEventListener('click', function(){
 	score1++;
