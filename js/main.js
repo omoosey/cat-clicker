@@ -26,14 +26,18 @@ cat2.addEventListener('click', function(){
 
 */
 
+const catNameDiv = document.getElementById('displayCatName');
+const scoreDiv = document.getElementById('score'); 
 const catNames = ['Cute Kitten', 'Hiding Cat', 'Hugging Cats', 'Bowtie Cat', 'Burrito Cat'];
 const catImages = ['img/cat.jpg', 'img/cat2.jpg', 'img/cat3.jpg', 'img/cat4.jpg', 'img/cat5.jpg']
+// let catScores = [0, 0, 0, 0, 0];
 const listOfCats = document.getElementById('catList');
-const imgLocation = document.getElementsByTagName('img')[0];
+const image = document.getElementsByTagName('img')[0];
 
 for (let i = 0; i < listOfCats.children.length; i++){
 	listOfCats.children[i].innerHTML = catNames[i];
 	listOfCats.children[i].addEventListener('click', function(){
-		imgLocation.setAttribute("src", catImages[i]);
-	})
+		catNameDiv.innerHTML = catNames[i];
+		image.setAttribute("src", catImages[i]);
+	});
 }
