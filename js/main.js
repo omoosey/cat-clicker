@@ -1,3 +1,5 @@
+/* OLD CODE
+
 const cat = document.getElementById('catImg');
 const cat2 = document.getElementById('catImg2');
 const catName1 = "Cute Kitten";
@@ -21,3 +23,6 @@ cat2.addEventListener('click', function(){
 	scoreText2.innerHTML = score2;  
 
 }, false);
+
+*/
+
