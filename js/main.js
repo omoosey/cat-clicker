@@ -26,3 +26,9 @@ cat2.addEventListener('click', function(){
 
 */
 
+const catNames = ['Cute Kitten', 'Hiding Cat', 'Hugging Cats', 'Bowtie Cat', 'Burrito Cat'];
+const listOfCats = document.getElementById('catList');
+
+for (let i = 0; i < listOfCats.children.length; i++){
+	listOfCats.children[i].innerHTML = catNames[i];
+}
