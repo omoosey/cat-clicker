@@ -30,14 +30,36 @@ const catNameDiv = document.getElementById('displayCatName');
 const scoreDiv = document.getElementById('score'); 
 const catNames = ['Cute Kitten', 'Hiding Cat', 'Hugging Cats', 'Bowtie Cat', 'Burrito Cat'];
 const catImages = ['img/cat.jpg', 'img/cat2.jpg', 'img/cat3.jpg', 'img/cat4.jpg', 'img/cat5.jpg']
-// let catScores = [0, 0, 0, 0, 0];
+let catScores = [0, 0, 0, 0, 0];
 const listOfCats = document.getElementById('catList');
 const image = document.getElementsByTagName('img')[0];
 
 for (let i = 0; i < listOfCats.children.length; i++){
+	let score = catScores[i];
 	listOfCats.children[i].innerHTML = catNames[i];
 	listOfCats.children[i].addEventListener('click', function(){
 		catNameDiv.innerHTML = catNames[i];
 		image.setAttribute("src", catImages[i]);
+		scoreDiv.innerHTML = catScores[i];
 	});
+
 }
+
+image.addEventListener('click', function(){
+	if(image.getAttribute('src') === "img/cat.jpg"){
+		catScores[0]++;
+		scoreDiv.innerHTML = catScores[0];
+	} else if(image.getAttribute('src') === "img/cat2.jpg"){
+		catScores[1]++;
+		scoreDiv.innerHTML = catScores[1];
+	} else if(image.getAttribute('src') === "img/cat3.jpg"){
+		catScores[2]++;
+		scoreDiv.innerHTML = catScores[2];
+	} else if(image.getAttribute('src') === "img/cat4.jpg"){
+		catScores[3]++;
+		scoreDiv.innerHTML = catScores[3];
+	} else {
+		catScores[4]++;
+		scoreDiv.innerHTML = catScores[4];
+	}
+});
