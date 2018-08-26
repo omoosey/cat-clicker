@@ -36,6 +36,10 @@ var octopus = {
 		return model.currentCat;
 	},
 
+	incrementClick: function(cat){
+		cat.clickCount++;
+	},
+
 	init: function(){
 		model.currentCat = model.cats[0];
 
@@ -72,7 +76,7 @@ var view = {
 		};
 
 		image.addEventListener('click', function(){
-			currentCat.clickCount++;
+			octopus.incrementClick(currentCat);
 			scoreDiv.innerHTML = currentCat.clickCount;
 		})
 	}
